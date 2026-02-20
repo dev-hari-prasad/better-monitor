@@ -37,8 +37,7 @@
                             autocorrect="off"
                             autocapitalize="none"
                             spellcheck="false"
-                        >
-                    
+                        >                    
                 </div>
 
                 <div class="form-group form-group-two-items">
@@ -107,7 +106,7 @@
                          </p>
                     </div>
 
-                    <button type="submit" class="inline-button">Create Monitor</button>
+                    <button type="submit" class="inline-button create-monitor-button">Create Monitor</button>
 
             </form>
          </div>
@@ -129,32 +128,34 @@
                     <div class="monitor-header">
                         <div class="info-on-left">
                             <p class="monitor-name"></p>
+                            <button class="refresh-button" type="button" aria-label="Refresh" data-tooltip="Refresh">
+                                <img src="/assets/svgs/arrow-clockwise.svg" aria-hidden="true">
+                            </button>
                         </div>
                         <div class="info-on-right">
-                             <div class="chip" title="Monitored URL">
-                                <img src="/assets/svgs/link-duotone.svg" alt="">
-                                <span class="endpoint-url"></span>
+                             <div class="chip border-none" title="Status">
+                                <img src="/assets/svgs/signal-full.svg" aria-hidden="true">
+                                <p class="indicator-state">Online</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="monitor-grid">
-                        <!-- Status Box -->
+                        <!-- URL Box (Previously Status Box) -->
                         <div class="grid-item">
-                            <div class="grid-label-wrapper">
-                                <img src="/assets/svgs/signal-full.svg" class="indicator-icon" aria-hidden="true">
-                                <span class="grid-label">Status</span>
+                             <div class="grid-label-wrapper">
+                                <img src="/assets/svgs/link-duotone.svg" aria-hidden="true">
+                                <span class="grid-label">URL</span>
                             </div>
                             <div class="grid-value">
-                                <div class="status-indicator-dot"></div>
-                                <p class="indicator-state">Online</p>
+                                <a href="#" target="_blank" class="endpoint-url text-like-link"></a>
                             </div>
                         </div>
 
                         <!-- Interval Box -->
                         <div class="grid-item">
                             <div class="grid-label-wrapper">
-                                <img src="/assets/svgs/timer-duotone.svg" alt="">
+                                <img src="/assets/svgs/timer-duotone.svg" aria-hidden="true">
                                 <span class="grid-label">Interval</span>
                             </div>
                             <div class="grid-value">
@@ -165,7 +166,7 @@
                         <!-- Alert Type Box -->
                         <div class="grid-item">
                             <div class="grid-label-wrapper">
-                                <img src="/assets/svgs/warning-duotone.svg" alt="">
+                                <img src="/assets/svgs/warning-duotone.svg" aria-hidden="true">
                                 <span class="grid-label">Alert Type</span>
                             </div>
                             <div class="grid-value">
@@ -176,7 +177,7 @@
                          <!-- Missing Keyword Box -->
                          <div class="grid-item">
                             <div class="grid-label-wrapper">
-                                <img src="/assets/svgs/exam-duotone.svg" alt="">
+                                <img src="/assets/svgs/exam-duotone.svg" aria-hidden="true">
                                 <span class="grid-label">Required Keyword</span>
                             </div>
                             <div class="grid-value">
@@ -192,7 +193,7 @@
         
                         </div>
                         <div class="separator"></div>
-                        <div class="monitor-actions-buttons delete-button" data-tooltip="Delete Monitor">
+                        <div class="monitor-actions-buttons delete-action" data-tooltip="Delete Monitor">
                             <img src="/assets/svgs/trash-simple-duotone.svg" aria-hidden="true">
                             <p class="monitor-actions-text">Delete</p>
                         </div>

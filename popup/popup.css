@@ -485,7 +485,7 @@ label{
 .chip {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 2px;
     background-color: #1e2732;
     padding: 3px 8px;
     border-radius: 20px;
@@ -617,4 +617,75 @@ label{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.refresh-button{
+    margin-left: 2px;
+    background-color: rgba(87, 87, 87, 0.262);
+    padding: 2px;
+    border-radius: 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 22px;
+    height: 22px;
+    line-height: 0;
+    outline: none;
+}
+
+.refresh-button:hover{
+    cursor: pointer;
+    background-color: rgba(87, 87, 87, 0.462);
+}
+
+.refresh-button:focus-visible{
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.refresh-button img{
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+}
+
+.refresh-button::after,
+.refresh-button::before{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.refresh-button::after{
+    content: attr(data-tooltip);
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111924;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    z-index: 15;
+}
+
+.refresh-button::before{
+    content: "";
+    top: calc(100% + 3px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #111924 transparent transparent transparent;
+}
+
+.refresh-button:hover::after,
+.refresh-button:hover::before{
+    opacity: 1;
 }
