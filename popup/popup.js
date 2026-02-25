@@ -265,3 +265,12 @@ function displayMonitors(){
 }
 
 displayMonitors()
+
+// Practice 
+document.getElementById("injectBtn").addEventListener("click", () => {
+  chrome.runtime.sendMessage(
+    { 
+        action: "inject"
+    }
+);
+});

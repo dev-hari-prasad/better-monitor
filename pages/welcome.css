@@ -1,0 +1,97 @@
+*{
+    scrollbar-width: thin;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/Manrope.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+    --primary-color: #f43f01;
+    --primary-light-color: #f43e013f;
+    --primary-bg-color: #151b23;
+    --spacing-unit: 1rem;
+    --card-bg: #08121d;
+    --card-padding: 12px 15px;
+    --button-padding: 7px 10px;
+    --border-round-small: 6px;
+    --light-border: rgb(88, 88, 88);
+    --card-round-small: 8px;
+}
+
+body{
+    padding: 5px;
+    background-color: var(--primary-bg-color);
+    color: white;
+    font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color-scheme: dark;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-heading{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+button{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--button-padding);
+    border-radius: var(--border-round-small);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-family: Manrope;
+
+    &:hover{
+        background-color:#e23900;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+}
+
+.button-fancy{
+    background-color: var(--primary-light-color);
+    border: 1px solid var(--primary-color);
+
+    &:hover{
+        background-color:#f43e0156;
+        cursor: pointer;
+    }
+}
+
+.branding{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.branding img{
+    height: 24px;
+}
+
+.text-like-link{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
